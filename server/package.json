@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.50",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun --minify",
+    "format:check": "biome format .",
+    "format:write": "biome format --write ."
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^0.8.0",
+    "@elysiajs/swagger": "^0.8.5",
+    "@sinclair/typebox": "^0.32.15",
+    "@types/node": "^20.11.24",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
